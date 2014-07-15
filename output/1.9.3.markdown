@@ -1,0 +1,4485 @@
+# 1.9.3 Results
+
+## Reel
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.247 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      345000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2225.35 [#/sec] (mean)
+    Time per request:       4.494 [ms] (mean)
+    Time per request:       0.449 [ms] (mean, across all concurrent requests)
+    Transfer rate:          149.95 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.5      0      37
+    Processing:     1    4   3.3      3      48
+    Waiting:        0    4   3.3      3      48
+    Total:          1    4   3.4      4      48
+
+    Percentage of the requests served within a certain time (ms)
+      50%      4
+      66%      4
+      75%      4
+      80%      5
+      90%      9
+      95%     10
+      98%     11
+      99%     13
+     100%     48 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     3.62ms    3.06ms  27.07ms   85.88%
+        Req/Sec     1.69k   595.13     2.89k    64.42%
+      32139 requests in 10.00s, 2.27MB read
+    Requests/sec:   3213.44
+    Transfer/sec:    232.22KB
+
+
+
+## WEBrick
+
+### Brooklyn
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   9.747 seconds
+    Complete requests:      5000
+    Failed requests:        18
+       (Connect: 0, Receive: 9, Length: 9, Exceptions: 0)
+    Write errors:           0
+    Total transferred:      968254 bytes
+    HTML transferred:       54901 bytes
+    Requests per second:    512.97 [#/sec] (mean)
+    Time per request:       19.494 [ms] (mean)
+    Time per request:       1.949 [ms] (mean, across all concurrent requests)
+    Transfer rate:          97.01 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    5  31.2      0     234
+    Processing:     0   14   4.6     13      40
+    Waiting:        0   12   4.2     11      39
+    Total:          0   19  31.8     13     257
+
+    Percentage of the requests served within a certain time (ms)
+      50%     13
+      66%     15
+      75%     17
+      80%     18
+      90%     21
+      95%     26
+      98%    192
+      99%    211
+     100%    257 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    16.06ms    6.50ms  44.43ms   71.17%
+        Req/Sec   332.11     66.82   511.00     68.69%
+      6542 requests in 10.00s, 1.24MB read
+    Requests/sec:    654.12
+    Transfer/sec:    127.14KB
+
+### Camping
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        18 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   10.966 seconds
+    Complete requests:      5000
+    Failed requests:        13
+       (Connect: 3, Receive: 6, Length: 4, Exceptions: 0)
+    Write errors:           0
+    Total transferred:      928884 bytes
+    HTML transferred:       89892 bytes
+    Requests per second:    455.94 [#/sec] (mean)
+    Time per request:       21.932 [ms] (mean)
+    Time per request:       2.193 [ms] (mean, across all concurrent requests)
+    Transfer rate:          82.72 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    6  31.2      0     350
+    Processing:     0   16   5.5     15      94
+    Waiting:        0   14   5.2     14      94
+    Total:          0   22  31.9     15     365
+
+    Percentage of the requests served within a certain time (ms)
+      50%     15
+      66%     18
+      75%     19
+      80%     21
+      90%     25
+      95%     29
+      98%    190
+      99%    210
+     100%    365 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    17.81ms    7.10ms  49.19ms   71.66%
+        Req/Sec   283.90     52.82   428.00     67.74%
+      5638 requests in 10.00s, 1.03MB read
+      Socket errors: connect 0, read 1, write 0, timeout 0
+    Requests/sec:    563.71
+    Transfer/sec:    105.16KB
+
+### Cuba
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   9.534 seconds
+    Complete requests:      5000
+    Failed requests:        11
+       (Connect: 1, Receive: 5, Length: 5, Exceptions: 0)
+    Write errors:           0
+    Total transferred:      969030 bytes
+    HTML transferred:       54945 bytes
+    Requests per second:    524.45 [#/sec] (mean)
+    Time per request:       19.068 [ms] (mean)
+    Time per request:       1.907 [ms] (mean, across all concurrent requests)
+    Transfer rate:          99.26 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    5  30.9      0     225
+    Processing:     0   14   5.1     13     202
+    Waiting:        0   12   4.0     11      33
+    Total:          0   19  31.7     13     250
+
+    Percentage of the requests served within a certain time (ms)
+      50%     13
+      66%     15
+      75%     16
+      80%     17
+      90%     21
+      95%     25
+      98%    195
+      99%    213
+     100%    250 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    15.25ms    6.23ms  43.25ms   75.80%
+        Req/Sec   338.08     70.37   540.00     67.88%
+      6694 requests in 10.00s, 1.27MB read
+    Requests/sec:    669.30
+    Transfer/sec:    130.07KB
+
+
+### Grape
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Send request failed!
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        17 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   13.362 seconds
+    Complete requests:      5000
+    Failed requests:        13
+       (Connect: 0, Receive: 6, Length: 7, Exceptions: 0)
+    Write errors:           1
+    Total transferred:      928884 bytes
+    HTML transferred:       84898 bytes
+    Requests per second:    374.20 [#/sec] (mean)
+    Time per request:       26.724 [ms] (mean)
+    Time per request:       2.672 [ms] (mean, across all concurrent requests)
+    Transfer rate:          67.89 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    7  34.5      0     400
+    Processing:     0   20   6.8     19      61
+    Waiting:        0   18   6.4     16      49
+    Total:          0   27  35.5     19     430
+
+    Percentage of the requests served within a certain time (ms)
+      50%     19
+      66%     23
+      75%     25
+      80%     27
+      90%     31
+      95%     36
+      98%    199
+      99%    222
+     100%    430 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    22.48ms    9.63ms  57.48ms   71.38%
+        Req/Sec   228.81     38.02   303.00     67.30%
+      4545 requests in 10.00s, 848.09KB read
+    Requests/sec:    454.46
+    Transfer/sec:     84.80KB
+
+
+
+### Nancy
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   9.494 seconds
+    Complete requests:      5000
+    Failed requests:        6
+       (Connect: 0, Receive: 3, Length: 3, Exceptions: 0)
+    Write errors:           0
+    Total transferred:      769538 bytes
+    HTML transferred:       54967 bytes
+    Requests per second:    526.66 [#/sec] (mean)
+    Time per request:       18.988 [ms] (mean)
+    Time per request:       1.899 [ms] (mean, across all concurrent requests)
+    Transfer rate:          79.16 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    6  37.9      0    1347
+    Processing:     0   13   4.6     12      36
+    Waiting:        0   12   4.3     11      34
+    Total:          0   19  38.4     12    1370
+
+    Percentage of the requests served within a certain time (ms)
+      50%     12
+      66%     14
+      75%     16
+      80%     17
+      90%     21
+      95%     25
+      98%    185
+      99%    212
+     100%   1370 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    15.48ms    6.43ms  44.92ms   72.99%
+        Req/Sec   325.59     64.41   487.00     65.57%
+      6466 requests in 10.00s, 0.98MB read
+      Socket errors: connect 0, read 2, write 0, timeout 0
+    Requests/sec:    646.55
+    Transfer/sec:    100.42KB
+
+
+### NYNY
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Send request failed!
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Send request failed!
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   10.581 seconds
+    Complete requests:      5000
+    Failed requests:        20
+       (Connect: 0, Receive: 11, Length: 9, Exceptions: 0)
+    Write errors:           2
+    Total transferred:      892841 bytes
+    HTML transferred:       54857 bytes
+    Requests per second:    472.54 [#/sec] (mean)
+    Time per request:       21.162 [ms] (mean)
+    Time per request:       2.116 [ms] (mean, across all concurrent requests)
+    Transfer rate:          82.40 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    5  32.0      0     588
+    Processing:     0   16   5.2     15      42
+    Waiting:        0   14   4.8     13      40
+    Total:          0   21  32.7     15     609
+
+    Percentage of the requests served within a certain time (ms)
+      50%     15
+      66%     17
+      75%     19
+      80%     20
+      90%     24
+      95%     29
+      98%    190
+      99%    211
+     100%    609 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    17.96ms    9.45ms  91.10ms   83.37%
+        Req/Sec   290.91     67.26   441.00     71.57%
+      5776 requests in 10.00s, 1.01MB read
+      Socket errors: connect 0, read 1, write 0, timeout 0
+    Requests/sec:    577.49
+    Transfer/sec:    103.77KB
+
+
+### Pakyow
+
+**AB:**
+
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   5.322 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      575000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    939.50 [#/sec] (mean)
+    Time per request:       10.644 [ms] (mean)
+    Time per request:       1.064 [ms] (mean, across all concurrent requests)
+    Transfer rate:          105.51 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       3
+    Processing:     2   10   4.7      8      31
+    Waiting:        1   10   4.7      8      28
+    Total:          2   11   4.7      9      31
+
+    Percentage of the requests served within a certain time (ms)
+      50%      9
+      66%     11
+      75%     12
+      80%     13
+      90%     18
+      95%     21
+      98%     24
+      99%     26
+     100%     31 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     0.00us    0.00us   0.00us     nan%
+        Req/Sec     0.00      0.00     0.00       nan%
+      0 requests in 10.00s, 0.99MB read
+      Socket errors: connect 0, read 9026, write 0, timeout 0
+    Requests/sec:      0.00
+    Transfer/sec:    101.35KB
+
+### Rack
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Send request failed!
+    Completed 1000 requests
+    Send request failed!
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   11.483 seconds
+    Complete requests:      5000
+    Failed requests:        29
+       (Connect: 2, Receive: 13, Length: 14, Exceptions: 0)
+    Write errors:           2
+    Total transferred:      892651 bytes
+    HTML transferred:       54835 bytes
+    Requests per second:    435.42 [#/sec] (mean)
+    Time per request:       22.967 [ms] (mean)
+    Time per request:       2.297 [ms] (mean, across all concurrent requests)
+    Transfer rate:          75.91 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    7  34.8      0     421
+    Processing:     0   16   7.6     15     145
+    Waiting:        0   14   7.1     13      93
+    Total:          0   23  36.4     15     465
+
+    Percentage of the requests served within a certain time (ms)
+      50%     15
+      66%     17
+      75%     19
+      80%     21
+      90%     26
+      95%     37
+      98%    200
+      99%    219
+     100%    465 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    14.75ms    6.01ms  38.31ms   72.79%
+        Req/Sec   352.44     55.89   476.00     64.88%
+      6934 requests in 10.00s, 1.22MB read
+      Socket errors: connect 0, read 3, write 0, timeout 0
+    Requests/sec:    693.36
+    Transfer/sec:    124.61KB
+
+
+### Rails
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   15.035 seconds
+    Complete requests:      5000
+    Failed requests:        20
+       (Connect: 4, Receive: 9, Length: 7, Exceptions: 0)
+    Write errors:           0
+    Total transferred:      998389 bytes
+    HTML transferred:       54901 bytes
+    Requests per second:    332.57 [#/sec] (mean)
+    Time per request:       30.069 [ms] (mean)
+    Time per request:       3.007 [ms] (mean, across all concurrent requests)
+    Transfer rate:          64.85 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    6  32.5      0     386
+    Processing:     0   24  10.4     22     192
+    Waiting:        0   22   9.4     20     115
+    Total:          0   30  34.7     22     415
+
+    Percentage of the requests served within a certain time (ms)
+      50%     22
+      66%     26
+      75%     29
+      80%     31
+      90%     41
+      95%     50
+      98%    197
+      99%    221
+     100%    415 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    25.22ms    9.98ms 103.20ms   81.63%
+        Req/Sec   204.06     36.69   274.00     67.86%
+      4022 requests in 10.00s, 805.19KB read
+    Requests/sec:    402.17
+    Transfer/sec:     80.51KB
+
+
+### Rambutan
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Send request failed!
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   10.332 seconds
+    Complete requests:      5000
+    Failed requests:        18
+       (Connect: 1, Receive: 10, Length: 7, Exceptions: 0)
+    Write errors:           1
+    Total transferred:      768306 bytes
+    HTML transferred:       54879 bytes
+    Requests per second:    483.93 [#/sec] (mean)
+    Time per request:       20.664 [ms] (mean)
+    Time per request:       2.066 [ms] (mean, across all concurrent requests)
+    Transfer rate:          72.62 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    5  30.7      0     368
+    Processing:     0   15   5.1     14      41
+    Waiting:        0   13   4.6     13      38
+    Total:          0   21  31.4     14     399
+
+    Percentage of the requests served within a certain time (ms)
+      50%     14
+      66%     17
+      75%     18
+      80%     20
+      90%     24
+      95%     28
+      98%    188
+      99%    210
+     100%    399 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    16.69ms    6.90ms  44.02ms   70.18%
+        Req/Sec   314.17     59.34   468.00     63.32%
+      6210 requests in 10.00s, 0.94MB read
+    Requests/sec:    620.98
+    Transfer/sec:     96.44KB
+
+
+### Ramaze
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   16.535 seconds
+    Complete requests:      5000
+    Failed requests:        26
+       (Connect: 4, Receive: 12, Length: 10, Exceptions: 0)
+    Write errors:           0
+    Total transferred:      893020 bytes
+    HTML transferred:       54868 bytes
+    Requests per second:    302.39 [#/sec] (mean)
+    Time per request:       33.070 [ms] (mean)
+    Time per request:       3.307 [ms] (mean, across all concurrent requests)
+    Transfer rate:          52.74 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    8  38.1      0     400
+    Processing:     0   25   9.2     24      82
+    Waiting:        0   22   8.6     21      80
+    Total:          0   33  39.9     24     454
+
+    Percentage of the requests served within a certain time (ms)
+      50%     24
+      66%     28
+      75%     31
+      80%     33
+      90%     40
+      95%     55
+      98%    212
+      99%    232
+     100%    454 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    34.49ms   17.68ms 106.92ms   75.38%
+        Req/Sec   159.16     40.01   271.00     63.08%
+      3191 requests in 10.00s, 573.89KB read
+    Requests/sec:    319.03
+    Transfer/sec:     57.38KB
+
+
+### Sinatra
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Send request failed!
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   11.574 seconds
+    Complete requests:      5000
+    Failed requests:        14
+       (Connect: 2, Receive: 6, Length: 6, Exceptions: 0)
+    Write errors:           1
+    Total transferred:      1437984 bytes
+    HTML transferred:       54923 bytes
+    Requests per second:    431.99 [#/sec] (mean)
+    Time per request:       23.149 [ms] (mean)
+    Time per request:       2.315 [ms] (mean, across all concurrent requests)
+    Transfer rate:          121.33 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    6  32.9      0     234
+    Processing:     0   17   5.6     16      46
+    Waiting:        0   15   5.3     14      44
+    Total:          0   23  33.8     16     260
+
+    Percentage of the requests served within a certain time (ms)
+      50%     16
+      66%     19
+      75%     21
+      80%     22
+      90%     26
+      95%     31
+      98%    199
+      99%    218
+     100%    260 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    19.59ms    8.41ms  63.89ms   73.37%
+        Req/Sec   264.59     50.68   436.00     72.78%
+      5269 requests in 10.00s, 1.47MB read
+      Socket errors: connect 0, read 1, write 0, timeout 0
+    Requests/sec:    526.90
+    Transfer/sec:    150.82KB
+
+
+### Cramp 
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Send request failed!
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        WEBrick/1.3.1
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        301 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   14.149 seconds
+    Complete requests:      5000
+    Failed requests:        13
+       (Connect: 0, Receive: 6, Length: 7, Exceptions: 0)
+    Write errors:           1
+    Non-2xx responses:      4993
+    Total transferred:      2541437 bytes
+    HTML transferred:       1502893 bytes
+    Requests per second:    353.39 [#/sec] (mean)
+    Time per request:       28.297 [ms] (mean)
+    Time per request:       2.830 [ms] (mean, across all concurrent requests)
+    Transfer rate:          175.41 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    7  33.9      0     250
+    Processing:     0   21  22.6     16     202
+    Waiting:        0   20  21.7     14     202
+    Total:          0   28  42.6     16     386
+
+    Percentage of the requests served within a certain time (ms)
+      50%     16
+      66%     18
+      75%     20
+      80%     21
+      90%     30
+      95%    114
+      98%    207
+      99%    226
+     100%    386 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    80.60ms   88.99ms 206.42ms   65.78%
+        Req/Sec   166.00    125.79   414.00     53.20%
+      3289 requests in 10.00s, 1.60MB read
+      Socket errors: connect 0, read 8, write 3, timeout 0
+      Non-2xx or 3xx responses: 3289
+    Requests/sec:    328.86
+    Transfer/sec:    163.49KB
+
+
+## Thin
+
+### Brooklyn
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   1.270 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      750000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    3935.52 [#/sec] (mean)
+    Time per request:       2.541 [ms] (mean)
+    Time per request:       0.254 [ms] (mean, across all concurrent requests)
+    Transfer rate:          576.49 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     1    2   2.5      2      44
+    Waiting:        0    2   2.3      2      44
+    Total:          1    3   2.5      2      44
+
+    Percentage of the requests served within a certain time (ms)
+      50%      2
+      66%      2
+      75%      3
+      80%      3
+      90%      3
+      95%      4
+      98%      9
+      99%     14
+     100%     44 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     2.36ms    2.61ms  18.39ms   92.76%
+        Req/Sec     2.79k     1.03k    6.00k    71.20%
+      53021 requests in 10.00s, 7.84MB read
+    Requests/sec:   5301.12
+    Transfer/sec:    802.42KB
+
+
+### Camping
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        18 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.254 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      710000 bytes
+    HTML transferred:       90000 bytes
+    Requests per second:    2218.37 [#/sec] (mean)
+    Time per request:       4.508 [ms] (mean)
+    Time per request:       0.451 [ms] (mean, across all concurrent requests)
+    Transfer rate:          307.63 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     1    4   3.0      3      41
+    Waiting:        1    4   2.9      3      41
+    Total:          1    4   3.0      3      41
+
+    Percentage of the requests served within a certain time (ms)
+      50%      3
+      66%      4
+      75%      5
+      80%      5
+      90%      6
+      95%     10
+      98%     14
+      99%     17
+     100%     41 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     4.67ms    3.95ms  26.41ms   88.01%
+        Req/Sec     1.36k   518.21     2.78k    65.79%
+      25454 requests in 10.00s, 3.57MB read
+    Requests/sec:   2545.14
+    Transfer/sec:    365.37KB
+
+
+### Cuba
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   1.054 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      750000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    4744.93 [#/sec] (mean)
+    Time per request:       2.108 [ms] (mean)
+    Time per request:       0.211 [ms] (mean, across all concurrent requests)
+    Transfer rate:          695.06 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     0    2   1.5      2      14
+    Waiting:        0    2   1.5      1      14
+    Total:          1    2   1.5      2      15
+
+    Percentage of the requests served within a certain time (ms)
+      50%      2
+      66%      2
+      75%      2
+      80%      2
+      90%      3
+      95%      3
+      98%      8
+      99%      9
+     100%     15 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     1.77ms    2.34ms  14.73ms   93.63%
+        Req/Sec     3.79k     1.37k    6.89k    68.14%
+      71467 requests in 10.00s, 10.56MB read
+    Requests/sec:   7146.89
+    Transfer/sec:      1.06MB
+
+
+### Grape
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        17 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   4.309 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      710000 bytes
+    HTML transferred:       85000 bytes
+    Requests per second:    1160.34 [#/sec] (mean)
+    Time per request:       8.618 [ms] (mean)
+    Time per request:       0.862 [ms] (mean, across all concurrent requests)
+    Transfer rate:          160.91 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.3      0       4
+    Processing:     1    8   4.8      7      39
+    Waiting:        1    8   4.8      6      38
+    Total:          1    9   4.8      7      40
+
+    Percentage of the requests served within a certain time (ms)
+      50%      7
+      66%      8
+      75%      9
+      80%     13
+      90%     16
+      95%     17
+      98%     19
+      99%     27
+     100%     40 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     9.00ms    6.68ms  48.76ms   85.62%
+        Req/Sec   644.75    193.46     1.17k    69.97%
+      12716 requests in 10.00s, 1.78MB read
+    Requests/sec:   1271.20
+    Transfer/sec:    182.49KB
+
+
+### Nancy
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   1.684 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      550000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2969.61 [#/sec] (mean)
+    Time per request:       3.367 [ms] (mean)
+    Time per request:       0.337 [ms] (mean, across all concurrent requests)
+    Transfer rate:          319.00 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       3
+    Processing:     1    3   2.9      2      53
+    Waiting:        0    3   2.8      2      53
+    Total:          1    3   2.9      3      55
+
+    Percentage of the requests served within a certain time (ms)
+      50%      3
+      66%      3
+      75%      3
+      80%      4
+      90%      5
+      95%      7
+      98%     10
+      99%     11
+     100%     55 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     2.45ms    2.31ms  17.63ms   92.23%
+        Req/Sec     2.54k     0.89k    4.67k    66.58%
+      48372 requests in 10.00s, 5.31MB read
+    Requests/sec:   4836.85
+    Transfer/sec:    543.20KB
+
+
+### NYNY
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.015 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      675000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2481.18 [#/sec] (mean)
+    Time per request:       4.030 [ms] (mean)
+    Time per request:       0.403 [ms] (mean, across all concurrent requests)
+    Transfer rate:          327.11 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   2.2      0      60
+    Processing:     0    4   2.7      3      63
+    Waiting:        0    3   2.3      3      21
+    Total:          1    4   3.5      3      64
+
+    Percentage of the requests served within a certain time (ms)
+      50%      3
+      66%      4
+      75%      4
+      80%      4
+      90%      5
+      95%     10
+      98%     12
+      99%     16
+     100%     64 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     4.29ms    5.07ms  30.96ms   90.81%
+        Req/Sec     1.71k   734.79     4.22k    72.20%
+      32474 requests in 10.00s, 4.34MB read
+    Requests/sec:   3247.28
+    Transfer/sec:    443.96KB
+
+
+### Pakyow
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   6.505 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      575000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    768.60 [#/sec] (mean)
+    Time per request:       13.011 [ms] (mean)
+    Time per request:       1.301 [ms] (mean, across all concurrent requests)
+    Transfer rate:          86.32 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       4
+    Processing:     1   13   5.7     11      41
+    Waiting:        1   12   5.5     10      37
+    Total:          2   13   5.7     11      41
+
+    Percentage of the requests served within a certain time (ms)
+      50%     11
+      66%     12
+      75%     14
+      80%     16
+      90%     22
+      95%     24
+      98%     29
+      99%     31
+     100%     41 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     0.00us    0.00us   0.00us     nan%
+        Req/Sec     0.00      0.00     0.00       nan%
+      0 requests in 10.00s, 870.25KB read
+      Socket errors: connect 0, read 7746, write 0, timeout 0
+    Requests/sec:      0.00
+    Transfer/sec:     87.00KB
+
+
+### Rack
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   0.864 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      575000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    5789.40 [#/sec] (mean)
+    Time per request:       1.727 [ms] (mean)
+    Time per request:       0.173 [ms] (mean, across all concurrent requests)
+    Transfer rate:          650.18 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     0    1   1.3      1      16
+    Waiting:        0    1   1.2      1      16
+    Total:          1    2   1.3      1      16
+
+    Percentage of the requests served within a certain time (ms)
+      50%      1
+      66%      2
+      75%      2
+      80%      2
+      90%      2
+      95%      3
+      98%      4
+      99%      8
+     100%     16 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     0.00us    0.00us   0.00us     nan%
+        Req/Sec     0.00      0.00     0.00       nan%
+      0 requests in 10.00s, 1.39MB read
+      Socket errors: connect 0, read 12626, write 0, timeout 20
+    Requests/sec:      0.00
+    Transfer/sec:    141.82KB
+
+
+### Rails
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   5.549 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      680000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    900.99 [#/sec] (mean)
+    Time per request:       11.099 [ms] (mean)
+    Time per request:       1.110 [ms] (mean, across all concurrent requests)
+    Transfer rate:          119.66 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       2
+    Processing:     1   11   8.0      9      85
+    Waiting:        1   10   7.8      8      84
+    Total:          1   11   8.0      9      85
+
+    Percentage of the requests served within a certain time (ms)
+      50%      9
+      66%     10
+      75%     11
+      80%     12
+      90%     17
+      95%     24
+      98%     36
+      99%     48
+     100%     85 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     0.00us    0.00us   0.00us     nan%
+        Req/Sec     0.00      0.00     0.00       nan%
+      0 requests in 10.00s, 1.04MB read
+      Socket errors: connect 0, read 7994, write 0, timeout 0
+    Requests/sec:      0.00
+    Transfer/sec:    106.15KB
+
+
+### Rambutan
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   1.745 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      550000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2865.03 [#/sec] (mean)
+    Time per request:       3.490 [ms] (mean)
+    Time per request:       0.349 [ms] (mean, across all concurrent requests)
+    Transfer rate:          307.77 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       6
+    Processing:     1    3   2.1      3      18
+    Waiting:        0    3   2.0      2      18
+    Total:          1    3   2.1      3      18
+
+    Percentage of the requests served within a certain time (ms)
+      50%      3
+      66%      3
+      75%      4
+      80%      4
+      90%      5
+      95%      8
+      98%     10
+      99%     12
+     100%     18 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    18.11ms   67.50ms 310.27ms   94.94%
+        Req/Sec     2.43k     1.09k    5.00k    67.88%
+      45602 requests in 10.00s, 5.00MB read
+    Requests/sec:   4559.38
+    Transfer/sec:    512.04KB
+
+
+### Ramaze
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   7.747 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      675000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    645.43 [#/sec] (mean)
+    Time per request:       15.493 [ms] (mean)
+    Time per request:       1.549 [ms] (mean, across all concurrent requests)
+    Transfer rate:          85.09 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       3
+    Processing:     1   15   5.8     14      49
+    Waiting:        1   14   5.8     13      44
+    Total:          2   15   5.8     14      49
+
+    Percentage of the requests served within a certain time (ms)
+      50%     14
+      66%     16
+      75%     19
+      80%     20
+      90%     23
+      95%     26
+      98%     31
+      99%     33
+     100%     49 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    13.47ms    5.44ms  45.43ms   75.00%
+        Req/Sec   383.07     83.74   638.00     70.66%
+      7534 requests in 10.00s, 1.01MB read
+    Requests/sec:    753.20
+    Transfer/sec:    102.98KB
+
+
+### Sinatra
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   3.390 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1220000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1474.96 [#/sec] (mean)
+    Time per request:       6.780 [ms] (mean)
+    Time per request:       0.678 [ms] (mean, across all concurrent requests)
+    Transfer rate:          351.45 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       3
+    Processing:     1    6   3.8      5      30
+    Waiting:        1    6   3.6      5      29
+    Total:          1    7   3.8      5      30
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      7
+      75%      7
+      80%      8
+      90%     12
+      95%     15
+      98%     18
+      99%     21
+     100%     30 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     5.74ms    4.79ms  44.75ms   87.18%
+        Req/Sec     1.00k   355.29     1.94k    63.91%
+      19425 requests in 10.00s, 4.61MB read
+    Requests/sec:   1942.24
+    Transfer/sec:    472.28KB
+
+
+### Cramp 
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   1.798 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      600000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2781.12 [#/sec] (mean)
+    Time per request:       3.596 [ms] (mean)
+    Time per request:       0.360 [ms] (mean, across all concurrent requests)
+    Transfer rate:          325.91 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       2
+    Processing:     1    3   2.3      3      21
+    Waiting:        0    2   2.0      2      20
+    Total:          1    4   2.3      3      21
+
+    Percentage of the requests served within a certain time (ms)
+      50%      3
+      66%      3
+      75%      4
+      80%      4
+      90%      5
+      95%      7
+      98%     12
+      99%     16
+     100%     21 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     0.00us    0.00us   0.00us     nan%
+        Req/Sec     0.00      0.00     0.00       nan%
+      0 requests in 10.00s, 1.87MB read
+      Socket errors: connect 0, read 16358, write 0, timeout 10
+    Requests/sec:      0.00
+    Transfer/sec:    191.63KB
+
+
+## Puma
+
+### Brooklyn
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.164 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      545000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2310.58 [#/sec] (mean)
+    Time per request:       4.328 [ms] (mean)
+    Time per request:       0.433 [ms] (mean, across all concurrent requests)
+    Transfer rate:          245.95 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     1    4   2.0      4      17
+    Waiting:        0    4   1.9      3      17
+    Total:          1    4   2.0      4      17
+
+    Percentage of the requests served within a certain time (ms)
+      50%      4
+      66%      4
+      75%      4
+      80%      4
+      90%      5
+      95%      6
+      98%     14
+      99%     15
+     100%     17 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     3.93ms    6.82ms  41.73ms   92.22%
+        Req/Sec     2.03k   702.62     3.89k    76.38%
+      38348 requests in 10.00s, 3.29MB read
+    Requests/sec:   3834.83
+    Transfer/sec:    337.10KB
+
+
+### Camping
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        18 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   3.571 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      505000 bytes
+    HTML transferred:       90000 bytes
+    Requests per second:    1400.01 [#/sec] (mean)
+    Time per request:       7.143 [ms] (mean)
+    Time per request:       0.714 [ms] (mean, across all concurrent requests)
+    Transfer rate:          138.09 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.3      0      18
+    Processing:     1    7   3.0      6      26
+    Waiting:        1    6   2.9      6      25
+    Total:          1    7   3.0      6      26
+
+    Percentage of the requests served within a certain time (ms)
+      50%      6
+      66%      7
+      75%      7
+      80%      7
+      90%      9
+      95%     13
+      98%     19
+      99%     21
+     100%     26 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     5.26ms    4.22ms  30.85ms   85.99%
+        Req/Sec     1.06k   318.07     1.78k    71.05%
+      20481 requests in 10.00s, 1.60MB read
+    Requests/sec:   2048.10
+    Transfer/sec:    164.03KB
+
+
+### Cuba
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.006 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      545000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2491.91 [#/sec] (mean)
+    Time per request:       4.013 [ms] (mean)
+    Time per request:       0.401 [ms] (mean, across all concurrent requests)
+    Transfer rate:          265.25 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       3
+    Processing:     1    4   2.1      3      24
+    Waiting:        1    4   2.0      3      24
+    Total:          1    4   2.1      4      24
+
+    Percentage of the requests served within a certain time (ms)
+      50%      4
+      66%      4
+      75%      4
+      80%      4
+      90%      5
+      95%      6
+      98%     14
+      99%     15
+     100%     24 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     3.10ms    5.07ms  34.80ms   92.63%
+        Req/Sec     2.39k   848.97     4.44k    76.21%
+      44996 requests in 10.00s, 3.86MB read
+    Requests/sec:   4499.76
+    Transfer/sec:    395.49KB
+
+
+### Grape
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        17 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   5.472 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      505000 bytes
+    HTML transferred:       85000 bytes
+    Requests per second:    913.70 [#/sec] (mean)
+    Time per request:       10.944 [ms] (mean)
+    Time per request:       1.094 [ms] (mean, across all concurrent requests)
+    Transfer rate:          90.12 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     2   11   7.1      9     154
+    Waiting:        1   10   6.7      9     153
+    Total:          2   11   7.1      9     154
+
+    Percentage of the requests served within a certain time (ms)
+      50%      9
+      66%     10
+      75%     11
+      80%     13
+      90%     17
+      95%     19
+      98%     20
+      99%     22
+     100%    154 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     9.08ms    6.43ms  37.38ms   73.45%
+        Req/Sec   581.88    132.82     1.00k    69.64%
+      11477 requests in 10.00s, 0.90MB read
+    Requests/sec:   1147.65
+    Transfer/sec:     91.91KB
+
+### Nancy
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.425 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      345000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2061.50 [#/sec] (mean)
+    Time per request:       4.851 [ms] (mean)
+    Time per request:       0.485 [ms] (mean, across all concurrent requests)
+    Transfer rate:          138.91 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     1    5   4.4      4      90
+    Waiting:        1    4   4.1      4      89
+    Total:          2    5   4.4      4      90
+
+    Percentage of the requests served within a certain time (ms)
+      50%      4
+      66%      4
+      75%      5
+      80%      5
+      90%      5
+      95%      7
+      98%     15
+      99%     18
+     100%     90 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     6.05ms   16.13ms  97.16ms   96.85%
+        Req/Sec     1.86k   670.21     3.33k    74.41%
+      34839 requests in 10.00s, 1.66MB read
+    Requests/sec:   3483.88
+    Transfer/sec:    170.13KB
+
+
+### NYNY
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.702 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      470000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1850.22 [#/sec] (mean)
+    Time per request:       5.405 [ms] (mean)
+    Time per request:       0.540 [ms] (mean, across all concurrent requests)
+    Transfer rate:          169.84 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       8
+    Processing:     1    5   3.8      4      40
+    Waiting:        1    5   3.8      4      40
+    Total:          1    5   3.8      4      40
+
+    Percentage of the requests served within a certain time (ms)
+      50%      4
+      66%      5
+      75%      5
+      80%      5
+      90%      6
+      95%     10
+      98%     23
+      99%     26
+     100%     40 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     4.63ms    6.62ms  36.79ms   90.70%
+        Req/Sec     1.68k   708.69     3.00k    68.26%
+      31679 requests in 10.00s, 2.27MB read
+    Requests/sec:   3167.94
+    Transfer/sec:    232.05KB
+
+
+### Pakyow
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        thin
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   4.882 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      575000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1024.12 [#/sec] (mean)
+    Time per request:       9.764 [ms] (mean)
+    Time per request:       0.976 [ms] (mean, across all concurrent requests)
+    Transfer rate:          115.01 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       3
+    Processing:     1    9   4.3      8      30
+    Waiting:        1    9   4.3      7      29
+    Total:          2   10   4.3      8      30
+
+    Percentage of the requests served within a certain time (ms)
+      50%      8
+      66%      9
+      75%     10
+      80%     11
+      90%     18
+      95%     19
+      98%     20
+      99%     20
+     100%     30 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     0.00us    0.00us   0.00us     nan%
+        Req/Sec     0.00      0.00     0.00       nan%
+      0 requests in 10.00s, 1.06MB read
+      Socket errors: connect 0, read 9623, write 0, timeout 0
+    Requests/sec:      0.00
+    Transfer/sec:    108.07KB
+
+
+### Rack
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   1.642 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      470000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    3044.66 [#/sec] (mean)
+    Time per request:       3.284 [ms] (mean)
+    Time per request:       0.328 [ms] (mean, across all concurrent requests)
+    Transfer rate:          279.49 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.0      0       1
+    Processing:     1    3   1.5      3      14
+    Waiting:        0    3   1.4      3      14
+    Total:          1    3   1.5      3      14
+
+    Percentage of the requests served within a certain time (ms)
+      50%      3
+      66%      3
+      75%      3
+      80%      3
+      90%      4
+      95%      4
+      98%     11
+      99%     12
+     100%     14 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     1.83ms    2.09ms  12.87ms   94.36%
+        Req/Sec     3.28k     1.05k    5.55k    75.17%
+      61703 requests in 10.00s, 4.41MB read
+    Requests/sec:   6170.49
+    Transfer/sec:    451.97KB
+
+
+### Rails
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   4.801 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      575000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1041.44 [#/sec] (mean)
+    Time per request:       9.602 [ms] (mean)
+    Time per request:       0.960 [ms] (mean, across all concurrent requests)
+    Transfer rate:          116.96 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.0      0       1
+    Processing:     1    9   4.5      8      36
+    Waiting:        1    9   4.3      8      35
+    Total:          2   10   4.5      9      36
+
+    Percentage of the requests served within a certain time (ms)
+      50%      9
+      66%      9
+      75%      9
+      80%     10
+      90%     10
+      95%     13
+      98%     29
+      99%     30
+     100%     36 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     8.71ms    6.21ms  33.89ms   91.66%
+        Req/Sec   662.53    196.07     0.89k    84.59%
+      12820 requests in 10.00s, 1.17MB read
+    Requests/sec:   1281.96
+    Transfer/sec:    120.19KB
+
+
+### Rambutan
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.057 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      345000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2430.24 [#/sec] (mean)
+    Time per request:       4.115 [ms] (mean)
+    Time per request:       0.411 [ms] (mean, across all concurrent requests)
+    Transfer rate:          163.76 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     1    4   3.0      4      58
+    Waiting:        1    4   2.8      3      57
+    Total:          2    4   3.0      4      58
+
+    Percentage of the requests served within a certain time (ms)
+      50%      4
+      66%      4
+      75%      4
+      80%      4
+      90%      4
+      95%      5
+      98%     14
+      99%     15
+     100%     58 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     3.52ms    4.61ms  27.51ms   92.05%
+        Req/Sec     2.02k   676.83     3.44k    76.67%
+      38123 requests in 10.00s, 1.82MB read
+    Requests/sec:   3812.28
+    Transfer/sec:    186.16KB
+
+
+### Ramaze
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   7.587 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      470000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    658.99 [#/sec] (mean)
+    Time per request:       15.175 [ms] (mean)
+    Time per request:       1.517 [ms] (mean, across all concurrent requests)
+    Transfer rate:          60.49 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       4
+    Processing:     1   15   7.2     13      83
+    Waiting:        1   14   7.0     12      83
+    Total:          2   15   7.2     13      83
+
+    Percentage of the requests served within a certain time (ms)
+      50%     13
+      66%     15
+      75%     18
+      80%     19
+      90%     23
+      95%     27
+      98%     36
+      99%     47
+     100%     83 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    12.17ms    8.45ms  67.13ms   77.63%
+        Req/Sec   445.30     93.84   790.00     69.52%
+      8799 requests in 10.00s, 644.65KB read
+    Requests/sec:    879.85
+    Transfer/sec:     64.46KB
+
+
+### Sinatra
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   3.440 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1015000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1453.68 [#/sec] (mean)
+    Time per request:       6.879 [ms] (mean)
+    Time per request:       0.688 [ms] (mean, across all concurrent requests)
+    Transfer rate:          288.18 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     1    7   2.9      6      26
+    Waiting:        1    6   2.8      5      26
+    Total:          2    7   2.9      6      27
+
+    Percentage of the requests served within a certain time (ms)
+      50%      6
+      66%      6
+      75%      7
+      80%      7
+      90%     11
+      95%     15
+      98%     17
+      99%     18
+     100%     27 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     5.69ms    4.29ms  26.39ms   79.83%
+        Req/Sec     0.95k   251.65     1.68k    65.18%
+      18528 requests in 10.00s, 3.25MB read
+    Requests/sec:   1852.68
+    Transfer/sec:    332.97KB
+
+
+### Cramp 
+
+There was an error running these tests with Cramp. Not quite sure why.
+
+**AB:**
+
+    A really lowlevel plumbing error occured. Please contact your local Maytag(tm) repair man.
+
+**WRK:**
+
+    A really lowlevel plumbing error occured. Please contact your local Maytag(tm) repair man.
+
+
+## Unicorn
+
+### Brooklyn
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   0.776 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      810000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    6443.22 [#/sec] (mean)
+    Time per request:       1.552 [ms] (mean)
+    Time per request:       0.155 [ms] (mean, across all concurrent requests)
+    Transfer rate:          1019.34 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       2
+    Processing:     0    1   1.4      1      13
+    Waiting:        0    1   1.4      1      13
+    Total:          1    2   1.4      1      13
+
+    Percentage of the requests served within a certain time (ms)
+      50%      1
+      66%      2
+      75%      2
+      80%      2
+      90%      2
+      95%      2
+      98%      9
+      99%     10
+     100%     13 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency   115.62ms   74.44ms 170.57ms   69.74%
+        Req/Sec   627.74      1.08k    4.33k    80.10%
+      12933 requests in 10.00s, 2.00MB read
+      Socket errors: connect 0, read 0, write 0, timeout 30
+    Requests/sec:   1293.04
+    Transfer/sec:    204.56KB
+
+
+### Camping
+
+**AB:**
+
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        18 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.730 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      770000 bytes
+    HTML transferred:       90000 bytes
+    Requests per second:    1831.74 [#/sec] (mean)
+    Time per request:       5.459 [ms] (mean)
+    Time per request:       0.546 [ms] (mean, across all concurrent requests)
+    Transfer rate:          275.48 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.3      0      18
+    Processing:     1    5   3.8      4      45
+    Waiting:        1    5   3.7      4      45
+    Total:          1    5   3.8      4      45
+
+    Percentage of the requests served within a certain time (ms)
+      50%      4
+      66%      5
+      75%      6
+      80%      7
+      90%      9
+      95%     12
+      98%     19
+      99%     20
+     100%     45 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    24.72ms   46.73ms 137.85ms   85.50%
+        Req/Sec   835.94    461.47     1.78k    64.81%
+      16362 requests in 10.00s, 2.40MB read
+    Requests/sec:   1635.86
+    Transfer/sec:    246.02KB
+
+
+### Cuba
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   0.779 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      810000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    6419.45 [#/sec] (mean)
+    Time per request:       1.558 [ms] (mean)
+    Time per request:       0.156 [ms] (mean, across all concurrent requests)
+    Transfer rate:          1015.58 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       2
+    Processing:     0    1   1.4      1      11
+    Waiting:        0    1   1.4      1      11
+    Total:          1    2   1.4      1      11
+
+    Percentage of the requests served within a certain time (ms)
+      50%      1
+      66%      1
+      75%      2
+      80%      2
+      90%      2
+      95%      2
+      98%      9
+      99%     10
+     100%     11 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency   385.68ms  158.59ms 451.23ms   85.45%
+        Req/Sec   497.15      1.27k    5.22k    87.20%
+      11679 requests in 10.00s, 1.80MB read
+      Socket errors: connect 0, read 0, write 0, timeout 30
+    Requests/sec:   1167.59
+    Transfer/sec:    184.72KB
+
+
+### Grape
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        17 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.898 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      770000 bytes
+    HTML transferred:       85000 bytes
+    Requests per second:    1725.43 [#/sec] (mean)
+    Time per request:       5.796 [ms] (mean)
+    Time per request:       0.580 [ms] (mean, across all concurrent requests)
+    Transfer rate:          259.49 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     1    6   3.7      4      26
+    Waiting:        1    6   3.7      4      26
+    Total:          1    6   3.7      4      26
+
+    Percentage of the requests served within a certain time (ms)
+      50%      4
+      66%      4
+      75%      5
+      80%      6
+      90%     13
+      95%     15
+      98%     16
+      99%     17
+     100%     26 (longest request)
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     8.55ms    9.64ms  37.35ms   90.54%
+        Req/Sec   836.24    334.68     1.52k    76.73%
+      16366 requests in 10.00s, 2.40MB read
+    Requests/sec:   1636.44
+    Transfer/sec:    246.10KB
+
+
+### Nancy
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   0.848 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      610000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    5899.32 [#/sec] (mean)
+    Time per request:       1.695 [ms] (mean)
+    Time per request:       0.170 [ms] (mean, across all concurrent requests)
+    Transfer rate:          702.85 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       1
+    Processing:     0    2   1.5      1      16
+    Waiting:        0    2   1.5      1      16
+    Total:          1    2   1.5      1      16
+
+    Percentage of the requests served within a certain time (ms)
+      50%      1
+      66%      2
+      75%      2
+      80%      2
+      90%      2
+      95%      2
+      98%     10
+      99%     10
+     100%     16 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency   168.29ms   94.51ms 222.03ms   75.62%
+        Req/Sec   807.29      1.55k    5.11k    81.31%
+      16366 requests in 10.00s, 1.90MB read
+      Socket errors: connect 0, read 0, write 0, timeout 30
+    Requests/sec:   1635.93
+    Transfer/sec:    194.91KB
+
+
+### NYNY
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   0.931 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      735000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    5370.43 [#/sec] (mean)
+    Time per request:       1.862 [ms] (mean)
+    Time per request:       0.186 [ms] (mean, across all concurrent requests)
+    Transfer rate:          770.95 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.0      0       1
+    Processing:     0    2   1.7      1      13
+    Waiting:        0    2   1.7      1      13
+    Total:          1    2   1.7      1      13
+
+    Percentage of the requests served within a certain time (ms)
+      50%      1
+      66%      1
+      75%      2
+      80%      2
+      90%      2
+      95%      3
+      98%     11
+      99%     12
+     100%     13 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    81.24ms   61.30ms 129.60ms   62.32%
+        Req/Sec     0.87k     1.30k    4.22k    77.92%
+      16370 requests in 10.00s, 2.29MB read
+      Socket errors: connect 0, read 0, write 0, timeout 20
+    Requests/sec:   1636.54
+    Transfer/sec:    234.93KB
+
+
+### Pakyow
+
+Would not run
+
+**AB:**
+
+**WRK:**
+
+
+### Rack
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   0.702 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      635000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    7125.39 [#/sec] (mean)
+    Time per request:       1.403 [ms] (mean)
+    Time per request:       0.140 [ms] (mean, across all concurrent requests)
+    Transfer rate:          883.72 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       2
+    Processing:     0    1   1.1      1      10
+    Waiting:        0    1   1.1      1      10
+    Total:          1    1   1.1      1      10
+
+    Percentage of the requests served within a certain time (ms)
+      50%      1
+      66%      1
+      75%      1
+      80%      1
+      90%      1
+      95%      2
+      98%      8
+      99%      8
+     100%     10 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     0.00us    0.00us   0.00us     nan%
+        Req/Sec     0.00      0.00     0.00       nan%
+      0 requests in 10.00s, 1.98MB read
+      Socket errors: connect 0, read 16374, write 0, timeout 30
+    Requests/sec:      0.00
+    Transfer/sec:    202.99KB
+
+
+### Rails
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   3.354 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      740000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1490.94 [#/sec] (mean)
+    Time per request:       6.707 [ms] (mean)
+    Time per request:       0.671 [ms] (mean, across all concurrent requests)
+    Transfer rate:          215.49 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       1
+    Processing:     1    7   4.7      5      28
+    Waiting:        1    7   4.7      5      28
+    Total:          1    7   4.7      5      28
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      5
+      75%      6
+      80%      6
+      90%      8
+      95%     18
+      98%     25
+      99%     25
+     100%     28 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     0.00us    0.00us   0.00us     nan%
+        Req/Sec     0.00      0.00     0.00       nan%
+      0 requests in 10.00s, 2.21MB read
+      Socket errors: connect 0, read 15660, write 0, timeout 0
+    Requests/sec:      0.00
+    Transfer/sec:    226.34KB
+
+
+### Rambutan
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   0.792 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      610000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    6316.72 [#/sec] (mean)
+    Time per request:       1.583 [ms] (mean)
+    Time per request:       0.158 [ms] (mean, across all concurrent requests)
+    Transfer rate:          752.58 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     0    1   1.4      1      12
+    Waiting:        0    1   1.4      1      12
+    Total:          1    2   1.4      1      13
+
+    Percentage of the requests served within a certain time (ms)
+      50%      1
+      66%      1
+      75%      2
+      80%      2
+      90%      2
+      95%      2
+      98%     10
+      99%     10
+     100%     13 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    10.90ms    5.12ms  14.00ms   78.20%
+        Req/Sec   771.33      1.53k    5.11k    82.75%
+      16380 requests in 10.00s, 1.91MB read
+      Socket errors: connect 0, read 0, write 0, timeout 30
+    Requests/sec:   1637.48
+    Transfer/sec:    195.09KB
+
+
+### Ramaze
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   4.658 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      735000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1073.43 [#/sec] (mean)
+    Time per request:       9.316 [ms] (mean)
+    Time per request:       0.932 [ms] (mean, across all concurrent requests)
+    Transfer rate:          154.10 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.0      0       1
+    Processing:     1    9   3.6      8      21
+    Waiting:        1    9   3.6      8      21
+    Total:          2    9   3.6      8      21
+
+    Percentage of the requests served within a certain time (ms)
+      50%      8
+      66%      8
+      75%      9
+      80%     11
+      90%     15
+      95%     18
+      98%     19
+      99%     19
+     100%     21 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency    10.57ms    5.08ms  22.31ms   83.36%
+        Req/Sec   493.37    196.19     0.86k    79.82%
+      9729 requests in 10.00s, 1.36MB read
+    Requests/sec:    972.84
+    Transfer/sec:    139.66KB
+
+
+### Sinatra
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   1.939 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1280000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2578.47 [#/sec] (mean)
+    Time per request:       3.878 [ms] (mean)
+    Time per request:       0.388 [ms] (mean, across all concurrent requests)
+    Transfer rate:          644.62 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.0      0       2
+    Processing:     1    4   2.4      3      17
+    Waiting:        1    4   2.4      3      17
+    Total:          1    4   2.4      3      17
+
+    Percentage of the requests served within a certain time (ms)
+      50%      3
+      66%      3
+      75%      3
+      80%      4
+      90%      5
+      95%     10
+      98%     13
+      99%     13
+     100%     17 (longest request)
+
+
+**WRK:**
+
+Running 10s test @ http://127.0.0.1:8000/
+  2 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    27.19ms   29.42ms  64.80ms   61.83%
+    Req/Sec     0.86k   770.74     2.11k    37.11%
+  16377 requests in 10.00s, 4.00MB read
+  Socket errors: connect 0, read 0, write 0, timeout 10
+Requests/sec:   1637.54
+Transfer/sec:    409.38KB
+
+
+### Cramp 
+
+would not run
+
+**AB:**
+
+**WRK:**
+
+
+
+## Passenger
+
+### Brooklyn
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.645 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1250000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1890.70 [#/sec] (mean)
+    Time per request:       5.289 [ms] (mean)
+    Time per request:       0.529 [ms] (mean, across all concurrent requests)
+    Transfer rate:          461.60 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       5
+    Processing:     1    5   2.0      5      35
+    Waiting:        1    5   1.9      4      35
+    Total:          2    5   2.0      5      35
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      6
+      75%      6
+      80%      6
+      90%      7
+      95%      8
+      98%      9
+      99%     10
+     100%     35 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     4.58ms    1.32ms  20.67ms   75.43%
+        Req/Sec     1.14k   170.91     1.64k    72.80%
+      21793 requests in 10.00s, 5.30MB read
+    Requests/sec:   2178.94
+    Transfer/sec:    542.50KB
+
+
+### Camping
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        18 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   3.169 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1210000 bytes
+    HTML transferred:       90000 bytes
+    Requests per second:    1577.88 [#/sec] (mean)
+    Time per request:       6.338 [ms] (mean)
+    Time per request:       0.634 [ms] (mean, across all concurrent requests)
+    Transfer rate:          372.90 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     2    6   2.8      6      53
+    Waiting:        2    6   2.7      5      53
+    Total:          2    6   2.8      6      53
+
+    Percentage of the requests served within a certain time (ms)
+      50%      6
+      66%      7
+      75%      7
+      80%      7
+      90%      8
+      95%      9
+      98%     10
+      99%     12
+     100%     53 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     5.41ms    1.77ms  24.82ms   73.89%
+        Req/Sec     0.95k   142.03     1.40k    70.54%
+      18348 requests in 10.00s, 4.32MB read
+    Requests/sec:   1834.75
+    Transfer/sec:    442.54KB
+
+
+### Cuba
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.549 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1250000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1961.62 [#/sec] (mean)
+    Time per request:       5.098 [ms] (mean)
+    Time per request:       0.510 [ms] (mean, across all concurrent requests)
+    Transfer rate:          478.91 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       2
+    Processing:     2    5   1.9      5      39
+    Waiting:        1    4   1.8      4      39
+    Total:          2    5   1.9      5      39
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      5
+      75%      6
+      80%      6
+      90%      7
+      95%      8
+      98%      9
+      99%     10
+     100%     39 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     4.58ms    1.53ms  21.93ms   78.70%
+        Req/Sec     1.17k   198.70     1.70k    73.61%
+      22341 requests in 10.00s, 5.43MB read
+    Requests/sec:   2234.04
+    Transfer/sec:    556.24KB
+
+
+### Grape
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        17 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   3.615 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1210000 bytes
+    HTML transferred:       85000 bytes
+    Requests per second:    1382.99 [#/sec] (mean)
+    Time per request:       7.231 [ms] (mean)
+    Time per request:       0.723 [ms] (mean, across all concurrent requests)
+    Transfer rate:          326.84 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     2    7   3.5      7      64
+    Waiting:        2    7   3.5      6      64
+    Total:          2    7   3.5      7      64
+
+    Percentage of the requests served within a certain time (ms)
+      50%      7
+      66%      8
+      75%      8
+      80%      8
+      90%     10
+      95%     11
+      98%     16
+      99%     21
+     100%     64 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     6.67ms    3.51ms  73.45ms   93.61%
+        Req/Sec   783.61    117.82     1.39k    77.88%
+      15234 requests in 10.00s, 3.59MB read
+    Requests/sec:   1523.28
+    Transfer/sec:    367.36KB
+
+
+### Nancy
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.621 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1050000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1907.97 [#/sec] (mean)
+    Time per request:       5.241 [ms] (mean)
+    Time per request:       0.524 [ms] (mean, across all concurrent requests)
+    Transfer rate:          391.28 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     2    5   1.5      5      24
+    Waiting:        1    5   1.5      4      23
+    Total:          2    5   1.5      5      24
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      6
+      75%      6
+      80%      6
+      90%      7
+      95%      8
+      98%      9
+      99%     10
+     100%     24 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     4.66ms    1.42ms  20.75ms   77.58%
+        Req/Sec     1.14k   166.47     1.73k    71.66%
+      21713 requests in 10.00s, 4.45MB read
+    Requests/sec:   2170.95
+    Transfer/sec:    455.71KB
+
+
+### NYNY
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.791 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1175000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1791.48 [#/sec] (mean)
+    Time per request:       5.582 [ms] (mean)
+    Time per request:       0.558 [ms] (mean, across all concurrent requests)
+    Transfer rate:          411.13 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       1
+    Processing:     2    5   1.7      5      25
+    Waiting:        2    5   1.7      5      25
+    Total:          2    6   1.7      5      25
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      6
+      75%      6
+      80%      7
+      90%      8
+      95%      8
+      98%     10
+      99%     10
+     100%     25 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     5.94ms    6.11ms  70.31ms   97.02%
+        Req/Sec     1.00k   222.72     1.50k    70.38%
+      19138 requests in 10.00s, 4.38MB read
+    Requests/sec:   1913.29
+    Transfer/sec:    448.34KB
+
+
+### Pakyow
+
+would not run
+
+**AB:**
+
+**WRK:**
+
+
+### Rack
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.467 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1075000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    2027.15 [#/sec] (mean)
+    Time per request:       4.933 [ms] (mean)
+    Time per request:       0.493 [ms] (mean, across all concurrent requests)
+    Transfer rate:          425.62 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       3
+    Processing:     1    5   1.3      4      22
+    Waiting:        1    4   1.3      4      20
+    Total:          2    5   1.3      5      23
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      5
+      75%      5
+      80%      5
+      90%      6
+      95%      7
+      98%      9
+      99%     10
+     100%     23 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     4.38ms    1.21ms  18.99ms   78.28%
+        Req/Sec     1.20k   184.85     1.80k    62.94%
+      22894 requests in 10.00s, 5.63MB read
+    Requests/sec:   2289.18
+    Transfer/sec:    576.68KB
+
+
+### Rails
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   4.420 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1180000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1131.25 [#/sec] (mean)
+    Time per request:       8.840 [ms] (mean)
+    Time per request:       0.884 [ms] (mean, across all concurrent requests)
+    Transfer rate:          260.72 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       4
+    Processing:     2    9   4.1      8     114
+    Waiting:        0    7   4.0      7     113
+    Total:          3    9   4.1      8     114
+
+    Percentage of the requests served within a certain time (ms)
+      50%      8
+      66%      9
+      75%     10
+      80%     10
+      90%     11
+      95%     13
+      98%     15
+      99%     17
+     100%    114 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     7.99ms    5.30ms 135.96ms   97.78%
+        Req/Sec   658.09    102.61     1.11k    69.46%
+      12813 requests in 10.00s, 3.41MB read
+    Requests/sec:   1281.11
+    Transfer/sec:    349.02KB
+
+
+### Rambutan
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   2.761 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1050000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1810.75 [#/sec] (mean)
+    Time per request:       5.523 [ms] (mean)
+    Time per request:       0.552 [ms] (mean, across all concurrent requests)
+    Transfer rate:          371.34 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       3
+    Processing:     1    5   2.1      5      35
+    Waiting:        0    5   2.1      4      35
+    Total:          2    5   2.1      5      35
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      6
+      75%      6
+      80%      6
+      90%      7
+      95%      9
+      98%     10
+      99%     12
+     100%     35 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     4.78ms    1.58ms  23.72ms   78.20%
+        Req/Sec     1.12k   183.25     1.70k    72.53%
+      21365 requests in 10.00s, 4.38MB read
+    Requests/sec:   2136.25
+    Transfer/sec:    448.45KB
+
+
+### Ramaze
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   4.670 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1175000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1070.60 [#/sec] (mean)
+    Time per request:       9.341 [ms] (mean)
+    Time per request:       0.934 [ms] (mean, across all concurrent requests)
+    Transfer rate:          245.70 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       5
+    Processing:     3    9   3.7      9      70
+    Waiting:        3    9   3.5      8      70
+    Total:          3    9   3.6      9      70
+
+    Percentage of the requests served within a certain time (ms)
+      50%      9
+      66%     10
+      75%     10
+      80%     11
+      90%     12
+      95%     14
+      98%     17
+      99%     20
+     100%     70 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     8.68ms    4.09ms  59.56ms   93.43%
+        Req/Sec   586.13     83.75     0.95k    69.01%
+      11450 requests in 10.00s, 2.62MB read
+    Requests/sec:   1145.01
+    Transfer/sec:    268.35KB
+
+
+### Sinatra
+
+**AB:**
+
+    This is ApacheBench, Version 2.3 <$Revision: 1373084 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 500 requests
+    Completed 1000 requests
+    Completed 1500 requests
+    Completed 2000 requests
+    Completed 2500 requests
+    Completed 3000 requests
+    Completed 3500 requests
+    Completed 4000 requests
+    Completed 4500 requests
+    Completed 5000 requests
+    Finished 5000 requests
+
+
+    Server Software:        nginx/1.4.4
+    Server Hostname:        127.0.0.1
+    Server Port:            8000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      10
+    Time taken for tests:   3.130 seconds
+    Complete requests:      5000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1720000 bytes
+    HTML transferred:       55000 bytes
+    Requests per second:    1597.59 [#/sec] (mean)
+    Time per request:       6.259 [ms] (mean)
+    Time per request:       0.626 [ms] (mean, across all concurrent requests)
+    Transfer rate:          536.69 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     2    6   1.7      6      21
+    Waiting:        2    6   1.7      5      21
+    Total:          2    6   1.7      6      22
+
+    Percentage of the requests served within a certain time (ms)
+      50%      6
+      66%      7
+      75%      7
+      80%      7
+      90%      8
+      95%      9
+      98%     10
+      99%     12
+     100%     22 (longest request)
+
+
+**WRK:**
+
+    Running 10s test @ http://127.0.0.1:8000/
+      2 threads and 10 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency     5.69ms    1.91ms  20.72ms   75.85%
+        Req/Sec     0.92k   154.41     1.46k    75.69%
+      17844 requests in 10.00s, 5.94MB read
+    Requests/sec:   1784.37
+    Transfer/sec:    608.16KB
+
+
+### Cramp 
+
+would not run
+
+**AB:**
+
+**WRK:**
+
+
+
+
+
