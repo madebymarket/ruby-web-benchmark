@@ -143,8 +143,8 @@ GEM
       tilt
     nio4r (1.0.0)
     nio4r (1.0.0-java)
-    pakyow-core (0.7.2)
-      rack (~> 1.3)
+    pakyow-core (0.8.0)
+      rack (~> 1.5)
     parslet (1.4.0)
       blankslate (~> 2.0)
     passenger (4.0.35)
@@ -489,7 +489,7 @@ DEPENDENCIES
   mizuno
   nancy
   nyny!
-  pakyow-core
+  pakyow-core (= 0.8)
   passenger
   puma
   racc

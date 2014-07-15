@@ -1,13 +1,17 @@
 require 'pakyow-core'
 
-class HelloApp < Pakyow::Application
-  config.server.port = 8000
+Pakyow::App.define do
+	config.server.port = 8000
+  config.app.auto_reload = false
+  config.app.static = false
+  config.app.log = false
+
   routes do
     get '/' do
-      response.body << "hello world"
+      res.body << "hello world"
     end
   end
 end
 
-
-HelloApp.run
+Pakyow::App.builder.run(Pakyow::App.stage)
+run Pakyow::App.builder.to_app

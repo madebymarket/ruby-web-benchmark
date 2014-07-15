@@ -19,7 +19,7 @@ gem 'goliath'
 gem 'grape'
 
 gem 'nancy'
-gem 'pakyow-core'
+gem 'pakyow-core', '0.8'
 
 gem 'actionpack', "~> 4.0"
 gem 'railties',   "~> 4.0"
