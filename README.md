@@ -4,6 +4,9 @@
 A whole bunch of benchmarks designed to give an idea of the basic overhead of various
 ruby web frameworks running on various ruby web servers.
 
+You can [find the whole Ruby Web Benchmark Report here](http://madebymarket.com/blog/dev/ruby-web-benchmark-report.html).
+
+
 ## Rack Frameworks
 
 - Brooklyn
@@ -70,8 +73,8 @@ ruby web frameworks running on various ruby web servers.
 
 ## Credits:
 
-https://github.com/luislavena/bench-micro
-http://www.techempower.com/benchmarks/
+- https://github.com/luislavena/bench-micro
+- http://www.techempower.com/benchmarks/
 
 
 ## Notes:
