@@ -1,11 +1,10 @@
 
-
-# Explanation
+# The Ruby Web Benchmark Report 
 
 A whole bunch of benchmarks designed to give an idea of the basic overhead of various
 ruby web frameworks running on various ruby web servers.
 
-# Rack Frameworks
+## Rack Frameworks
 
 - Brooklyn
 - Camping 
@@ -21,11 +20,11 @@ ruby web frameworks running on various ruby web servers.
 - Sinatra 
 
 
-# EventMachine Frameworks
+## EventMachine Frameworks
 
 - Cramp
 
-# Other Frameworks
+## Other Frameworks
 
 - Reel 
 
@@ -35,7 +34,7 @@ ruby web frameworks running on various ruby web servers.
 - Hobbit
 - Goliath
 
-# Ruby Versions
+## Ruby Versions
 
 - Ruby 1.9.3
 - Ruby 2.0.0
@@ -44,7 +43,7 @@ ruby web frameworks running on various ruby web servers.
 - Rubinus 2.2.2
 
 
-# Ruby Servers
+## Ruby Servers
 
 **Ruby**:
 
@@ -69,13 +68,13 @@ ruby web frameworks running on various ruby web servers.
 - Puma
 
 
-# Credits:
+## Credits:
 
 https://github.com/luislavena/bench-micro
 http://www.techempower.com/benchmarks/
 
 
-# Notes:
+## Notes:
 
  - WEBrick is a slow performer and it is difficult to becnhmark with Apache Bench.
  - Sometimes wrk doesn't seem jive well with certain frameworks
@@ -99,8 +98,5 @@ http://www.techempower.com/benchmarks/
  - "lightweight" or "micro" is a relative term
  - Jubilee is a bit buggy and thus hard to benchmark
  - Jubilee is fast when it works
-
-
-
 
 
