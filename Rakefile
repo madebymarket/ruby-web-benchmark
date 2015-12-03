@@ -11,6 +11,10 @@ task :thin, [:framework] do |t, args|
   system "thin start -p 8000 -R #{args.framework}.ru"
 end
 
+task :plezi do
+  system "ruby plezi.rb -p 8000"
+end
+
 task :puma, [:framework] do |t, args|
   system "puma -e production -t 16:16 -p 8000 #{args.framework}.ru"
 end
