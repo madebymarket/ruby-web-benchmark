@@ -4,6 +4,7 @@ gem 'rake'
 
 gem 'rack'
 gem 'webrick'
+gem 'plezi'
 gem 'puma'
 gem 'passenger'
 gem 'reel'
