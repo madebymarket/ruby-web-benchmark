@@ -29,6 +29,7 @@ You can [find the whole Ruby Web Benchmark Report here](http://madebymarket.com/
 
 ## Other Frameworks
 
+- Plezi
 - Reel 
 
 ## Not Working
